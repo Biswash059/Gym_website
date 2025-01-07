@@ -13,14 +13,14 @@ const Header = () => {
   };
 
   const handleMenuNav = () => {
-    setMenuNav(!menuNav)
-  }
+    setMenuNav(!menuNav);
+  };
 
   return (
     <nav>
       <div className="bg-black text-white w-full flex justify-around items-center py-4 px-6 md:px-20 lg:px-30">
         {/* Logo Section */}
-        <div>
+        <div className="z-40">
           <img className="min-w-[85px]" src={Logo} alt="" />
         </div>
 
@@ -41,7 +41,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("about")} href="#">
+              <a onClick={() => handleLinkClick("about")} href="/about">
                 <span
                   className={`${
                     activeLink === "about"
@@ -130,10 +130,14 @@ const Header = () => {
           {menuNav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
 
-
-
         {/* Mobile Screen */}
-        <div className={menuNav ? 'fixed left-0 top-0 w-[100%] h-full bg-[#000300] ease-in-out duration-500 z-20' : 'fixed left-[-100%]'}>
+        <div
+          className={
+            menuNav
+              ? "fixed left-0 top-0 w-[100%] h-full bg-[#000300] ease-in-out duration-500 z-20"
+              : "fixed left-[-100%]"
+          }
+        >
           <ul className="flex flex-col gap-6 items-center p-[60px] text-xl">
             <li>
               <a onClick={() => handleLinkClick("home")} href="#">
