@@ -20,7 +20,7 @@ const Header = () => {
     <nav>
       <div className="bg-black text-white w-full flex justify-around items-center py-4 px-6 md:px-20 lg:px-30">
         {/* Logo Section */}
-        <div>
+        <div className="z-40">
           <img className="min-w-[85px]" src={Logo} alt="" />
         </div>
 
@@ -41,7 +41,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("about")} href="#">
+              <a onClick={() => handleLinkClick("about")} href="/about">
                 <span
                   className={`${
                     activeLink === "about"
