@@ -5,11 +5,11 @@ import Header from "./Header";
 const Hero = () => {
   return (
     <section
-      className="min-h-screen mb-4 bg-cover bg-center w-full overflow-hidden "
+      className="min-h-screen bg-cover bg-center bg-no-repeat "
       style={{ backgroundImage: `url(${HeroImage})` }}
       id="home"
     >
-      <div><Header /></div>
+      <Header />
       <div className="container mx-auto h-full">
         <Slider />
       </div>
