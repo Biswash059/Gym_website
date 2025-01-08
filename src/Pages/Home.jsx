@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import Hero from "../Components/Hero";
 import AboutSection from "../Components/AboutSection";
 import Classes from "../Components/Classes";
+import TrainerMeetSection from "../Components/TrainerMeetSection";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <AboutSection />
       <Classes />
+      <TrainerMeetSection />
     </>
   );
 };

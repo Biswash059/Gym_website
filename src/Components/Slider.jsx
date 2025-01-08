@@ -24,7 +24,7 @@ const Slider = () => {
               </p>
               <CustomButton
                 text="Get started"
-                containerStyles="w-[196px] h-[62px] bg-red-300 mt-4"
+                containerStyles="px-7 py-4 bg-red-300 mt-4"
               />
             </div>
           </div>
