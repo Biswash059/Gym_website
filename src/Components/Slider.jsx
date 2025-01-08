@@ -17,12 +17,12 @@ const Slider = () => {
                 <span>Hard Work</span> <br />
                 is For Every Success
               </h1>
-              <p className="text-white text-center lg:text-left mb-4">
+              <p className="text-white text-center lg:text-left">
                 Start by taking inspiration, Continue it to give inspiration
               </p>
               <CustomButton
                 text="Get started"
-                containerStyles="w-[196px] h-[62px] bg-red-300"
+                containerStyles="w-[196px] h-[62px] bg-red-300 mt-4"
               />
             </div>
           </div>
