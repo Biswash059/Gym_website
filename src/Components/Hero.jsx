@@ -5,7 +5,7 @@ import Header from "./Header";
 const Hero = () => {
   return (
     <section
-      className="min-h-screen bg-cover bg-center bg-no-repeat "
+      className="min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden "
       style={{ backgroundImage: `url(${HeroImage})` }}
       id="home"
     >

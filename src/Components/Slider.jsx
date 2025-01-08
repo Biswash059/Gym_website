@@ -9,22 +9,22 @@ import SwiperButton from "./SwiperButton";
 const Slider = () => {
   return (
     <div className="relative w-full h-full">
-      <Swiper className="relative z-10">
-        <SwiperSlide className="relative">
-          <div className=" h-full flex justify-end pt-48">
-            <div className="flex flex-col items-center lg:items-start lg:max-w-[700px]">
-              <h1 className="text-6xl text-white font-bold text-center lg:text-left mb-4 sm:px-9">
-                <span>
-                  Hard Work <br />
-                </span>
+      <Swiper className="">
+        <SwiperSlide className="">
+          <div className="relative h-[80vh] flex justify-end pt-48">
+            <div className="absolute right-[15%] flex flex-col gap-4 items-center lg:items-start lg:max-w-[700px]">
+              <h1 className="text-6xl text-white font-bold">
+                <span className="text-red-600">
+                  Hard Work 
+                </span><br />
                 is For Every Success
               </h1>
-              <p className="text-white text-center lg:text-left mb-4">
+              <p className="text-white text-center lg:text-left">
                 Start by taking inspiration, Continue it to give inspiration
               </p>
               <CustomButton
                 text="Get started"
-                containerStyles="w-[196px] h-[62px] bg-red-300"
+                containerStyles="w-[196px] h-[62px] bg-red-300 mt-4"
               />
             </div>
           </div>

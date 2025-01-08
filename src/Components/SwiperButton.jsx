@@ -1,11 +1,17 @@
 import { GrFormPrevious } from "react-icons/gr";
-import { IoChevronForwardOutline } from "react-icons/io5";
+import { GrFormNext } from "react-icons/gr";
 
 const SwiperButton = () => {
   return (
-    <div className="flex justify-center items-center mt-10 mb-5">
-      <GrFormPrevious className=" text-red-500 text-5xl cursor-pointer mr-4 hover:text-white hover:scale-110 transition-all duration-300" />
-      <IoChevronForwardOutline className=" text-red-500 text-5xl cursor-pointer mr-4 hover:text-white hover:scale-110 transition-all duration-300" />
+    <div className="absolute right-[20%] bottom-[0] z-10">
+      <div className="flex gap-2">
+        <button className="border-2 border-red-600 p-2 rounded-sm hover:bg-red-600 ease-in-out duration-200">
+          <GrFormPrevious size={20} color="white" />
+        </button>
+        <button className="border-2 border-red-600 p-2 rounded-sm hover:bg-red-600 ease-in-out duration-200">
+          <GrFormNext size={20} color="White" />
+        </button>
+      </div>
     </div>
   );
 };
