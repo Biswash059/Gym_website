@@ -1,12 +1,19 @@
-import React from "react";
-import HeroImg from "../assets/img/hero/bg.png";
 import Slider from "./Slider";
+import HeroImage from "../assets/img/hero/bg.png";
+import Header from "./Header";
 
 const Hero = () => {
   return (
-    <div className="relative">
-      <Slider />
-    </div>
+    <section
+      className="min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden "
+      style={{ backgroundImage: `url(${HeroImage})` }}
+      id="home"
+    >
+      <Header />
+      <div className="container mx-auto h-full">
+        <Slider />
+      </div>
+    </section>
   );
 };
 
