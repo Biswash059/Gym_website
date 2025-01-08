@@ -45,7 +45,10 @@ const Classes = () => {
           >
             <h3 className="h1 text-red-600">{item.name}</h3>
             <p className="w-[55%] text-center text-white">{item.description}</p>
-            <button className="mt-5 text-white border border-white px-4 py-2 hover:bg-red-600 hover:border-red-600 ease-in-out duration-150 ">READ MORE</button>
+            <button className="relative mt-5 text-white border border-white px-4 py-2 z-20 group overflow-hidden">
+              <span className="absolute w-0 h-full top-0 left-0 bg-red-600 z-10 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+              <span className="relative z-20">READ MORE</span>
+            </button>
           </div>
         ))}
       </div>
