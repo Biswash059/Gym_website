@@ -10,7 +10,7 @@ const Hero = () => {
       id="home"
     >
       <Header />
-      <div className="container mx-auto h-full">
+      <div className="container mx-auto h-screen">
         <Slider />
       </div>
     </section>
