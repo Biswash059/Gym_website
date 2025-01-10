@@ -63,12 +63,12 @@ const Testimonials = () => {
     ],
   };
   return (
-    <div className="p-4 overflow-x-hidden min-h-screen flex flex-col items-center">
-      <h1 className="text-5xl font-bold mb-10 text-gray-700">
+    <div className="p-4 overflow-x-hidden min-h-[75vh] flex flex-col items-center">
+      <h1 className="h1 mt-10 ">
         OUR TESTIMONIALS
       </h1>
 
-      <Slider {...settings} className="w-full max-w-6xl ">
+      <Slider {...settings} className="w-full max-w-6xl mt-6 ">
         {info.map((item, index) => (
           <div
             key={index}
