@@ -5,6 +5,7 @@ import AboutSection from "../Components/AboutSection";
 import Classes from "../Components/Classes";
 import TrainerMeetSection from "../Components/TrainerMeetSection";
 import Membership from "../Components/Membership";
+import BmiCalc from "../Components/BmiCalc";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Classes />
       <TrainerMeetSection />
       <Membership />
+      <BmiCalc />
     </>
   );
 };
