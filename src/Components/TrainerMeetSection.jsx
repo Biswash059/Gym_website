@@ -38,7 +38,7 @@ const TrainerMeetSection = () => {
     <section className="min-h-screen">
       <div>
         <h1 className="h1 text-center my-20">MEET OUR TRAINERS</h1>
-        <div className="m-w-[75%] flex justify-center items-center gap-4 mb-7">
+        <div className="m-w-[75%] flex flex-wrap justify-center items-center gap-4 mb-7">
           {Cards.map((item, index) => (
             <div key={index} className="">
               <img src={item.img} alt="" />
@@ -70,7 +70,7 @@ const TrainerMeetSection = () => {
         <div className="text-center">
           <CustomButton
             text={"VIEW ALL TRAINERS"}
-            containerStyles="px-6 py-3 bg-red-300 mt-4"
+            containerStyles="px-6 py-3 bg-red-300 mt-4 mb-10 md:mb-0 "
           />
         </div>
       </div>
