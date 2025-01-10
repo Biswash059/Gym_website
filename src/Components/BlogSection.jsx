@@ -67,9 +67,9 @@ const BlogSection = () => {
   };
 
   return (
-    <section className="min-h-[90vh] bg-black pt-16">
+    <section className="min-h-[93vh] bg-black pt-16">
       <h1 className="h1 text-white text-center">BLOGS</h1>
-      <div className="flex flex-col items-center mx-8 my-8">
+      <div className="flex flex-col items-center mx-8 my-10">
         <Slider {...settings} className="w-full max-w-7xl px-4">
           {Cards.map((item, index) => (
             <div key={index} className="px-6">
@@ -83,7 +83,7 @@ const BlogSection = () => {
                 <p className="text-gray-400">{item.date}</p>
               </div>
               <div>
-                <h3 className="text-[18px] font-semibold md:h4 text-white uppercase ">{item.title}</h3>
+                <h3 className="text-[18px] font-semibold md:h4 text-white hover:text-red-500 uppercase ">{item.title}</h3>
               </div>
             </div>
           ))}

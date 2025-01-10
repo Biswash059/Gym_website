@@ -31,7 +31,7 @@ const AboutSection = () => {
     <section className=" bg-gray-50 pt-8 pb-14 lg:pt-16 lg:pb-28">
       <div className="container mx-auto">
         <div className="flex flex-col items-center gap-2 mb-8">
-            <h1 className="h1 text-center">ABOUT US</h1>
+          <h1 className="h1 text-center">ABOUT US</h1>
           <p className="max-w-[700px] mx-5 text-center text-[16px] md:text-[18px]">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

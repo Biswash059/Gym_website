@@ -7,6 +7,7 @@ import TrainerMeetSection from "../Components/TrainerMeetSection";
 import Membership from "../Components/Membership";
 import BmiCalc from "../Components/BmiCalc";
 import BlogSection from "../Components/BlogSection";
+import Testimonials from "../Components/Testimonials"
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <TrainerMeetSection />
       <Membership />
       <BmiCalc />
+      <Testimonials />
       <BlogSection />
     </>
   );
