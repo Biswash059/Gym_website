@@ -28,7 +28,7 @@ const Header = () => {
         <div className="uppercase md:text-[14px] lg:text-[16px] mx-7 lg:mx-12">
           <ul className="hidden md:flex gap:3 lg:gap-7 md:gap-4 ">
             <li>
-              <a onClick={() => handleLinkClick("home")} href="#">
+              <a onClick={() => handleLinkClick("home")} >
                 <span
                   className={`${
                     activeLink === "home"
@@ -41,7 +41,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("about")} href="/about">
+              <a onClick={() => handleLinkClick("about")}>
                 <span
                   className={`${
                     activeLink === "about"
@@ -54,7 +54,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("trainer")} href="#">
+              <a onClick={() => handleLinkClick("trainer")} >
                 <span
                   className={`${
                     activeLink === "trainer"
@@ -67,7 +67,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("prices")} href="#">
+              <a onClick={() => handleLinkClick("prices")} >
                 <span
                   className={`${
                     activeLink === "prices"
