@@ -1,10 +1,19 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import Logo from "../assets/img/logo.png";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
-const Header = () => {
-  const [activeLink, setActiveLink] = useState("home");
+const Header = ({ activeLink: initialActiveLink }) => {
+  const [activeLink, setActiveLink] = useState(initialActiveLink || "home");
   const [menuNav, setMenuNav] = useState(false);
+
+  useEffect(() => {
+    // Update the state if the `initialActiveLink` changes dynamically
+    if (initialActiveLink) {
+      setActiveLink(initialActiveLink);
+    }
+  }, [initialActiveLink]);
 
   const handleLinkClick = (link) => {
     if (activeLink !== link) {
@@ -28,7 +37,7 @@ const Header = () => {
         <div className="uppercase md:text-[14px] lg:text-[16px] mx-7 lg:mx-12">
           <ul className="hidden md:flex gap:3 lg:gap-7 md:gap-4 ">
             <li>
-              <a onClick={() => handleLinkClick("home")} >
+              <Link to="/" onClick={() => handleLinkClick("home")}>
                 <span
                   className={`${
                     activeLink === "home"
@@ -38,10 +47,10 @@ const Header = () => {
                 >
                   Home
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("about")}>
+              <Link to="/about" onClick={() => handleLinkClick("about")}>
                 <span
                   className={`${
                     activeLink === "about"
@@ -51,10 +60,10 @@ const Header = () => {
                 >
                   About
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("trainer")} >
+              <Link to="/trainer" onClick={() => handleLinkClick("trainer")}>
                 <span
                   className={`${
                     activeLink === "trainer"
@@ -64,10 +73,10 @@ const Header = () => {
                 >
                   Trainer
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("prices")} >
+              <Link to="/prices" onClick={() => handleLinkClick("prices")}>
                 <span
                   className={`${
                     activeLink === "prices"
@@ -77,10 +86,13 @@ const Header = () => {
                 >
                   Prices
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("testimonials")} href="#">
+              <Link
+                to="testimonials"
+                onClick={() => handleLinkClick("testimonials")}
+              >
                 <span
                   className={`${
                     activeLink === "testimonials"
@@ -90,10 +102,10 @@ const Header = () => {
                 >
                   Testimonials
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("blog")} href="#">
+              <Link to="/blog" onClick={() => handleLinkClick("blog")}>
                 <span
                   className={`${
                     activeLink === "blog"
@@ -103,10 +115,10 @@ const Header = () => {
                 >
                   Blog
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("contact")} href="#">
+              <Link to="/contact" onClick={() => handleLinkClick("contact")}>
                 <span
                   className={`${
                     activeLink === "contact"
@@ -116,7 +128,7 @@ const Header = () => {
                 >
                   Contact
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -140,7 +152,7 @@ const Header = () => {
         >
           <ul className="flex flex-col gap-6 items-center p-[60px] text-xl">
             <li>
-              <a onClick={() => handleLinkClick("home")} href="#">
+              <Link to="/" onClick={() => handleLinkClick("home")}>
                 <span
                   className={`${
                     activeLink === "home"
@@ -150,10 +162,10 @@ const Header = () => {
                 >
                   Home
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("about")} href="#">
+              <Link to="/about" onClick={() => handleLinkClick("about")}>
                 <span
                   className={`${
                     activeLink === "about"
@@ -163,10 +175,10 @@ const Header = () => {
                 >
                   About
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("trainer")} href="#">
+              <Link to="/trainer" onClick={() => handleLinkClick("trainer")}>
                 <span
                   className={`${
                     activeLink === "trainer"
@@ -176,10 +188,10 @@ const Header = () => {
                 >
                   Trainer
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("prices")} href="#">
+              <Link to="/prices" onClick={() => handleLinkClick("prices")}>
                 <span
                   className={`${
                     activeLink === "prices"
@@ -189,10 +201,13 @@ const Header = () => {
                 >
                   Prices
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("testimonials")} href="#">
+              <Link
+                to="/testimonials"
+                onClick={() => handleLinkClick("testimonials")}
+              >
                 <span
                   className={`${
                     activeLink === "testimonials"
@@ -202,10 +217,10 @@ const Header = () => {
                 >
                   Testimonials
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("blog")} href="#">
+              <Link to="/blog" onClick={() => handleLinkClick("blog")}>
                 <span
                   className={`${
                     activeLink === "blog"
@@ -215,10 +230,10 @@ const Header = () => {
                 >
                   Blog
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => handleLinkClick("contact")} href="#">
+              <Link to="/contact" onClick={() => handleLinkClick("contact")}>
                 <span
                   className={`${
                     activeLink === "contact"
@@ -228,7 +243,7 @@ const Header = () => {
                 >
                   Contact
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
