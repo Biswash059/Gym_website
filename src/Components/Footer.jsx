@@ -181,10 +181,10 @@ const Footer = () => {
 
         {/* Copyright */}
 
-        <div className="flex justify-between items-center text-white border-t border-white/20 mt-20 py-12">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 text-white border-t border-white/20 mt-20 mx-5 py-12">
           <p className="text-gray-400">&copy; Copyright 2024 FitPhysique. </p>
-          <div className="flex gap-10">
-            <div className="relative bg-white text-red-500 rounded-full p-4 group overflow-hidden cursor-pointer">
+          <div className="flex gap-6 md:gap-10">
+            <div className="relative  bg-white text-red-500 rounded-full p-4 group overflow-hidden cursor-pointer">
               <span className="absolute bottom-0 left-0 w-full h-0 bg-blue-700 z-10 transition-all duration-500 ease-in-out group-hover:h-full"></span>
               <span className="relative z-20  group-hover:text-white transition-all duration-300 ease-in-out">
                 <FaFacebookF size={20} />
