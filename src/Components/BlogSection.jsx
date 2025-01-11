@@ -8,6 +8,7 @@ import Blog2 from "../assets/img/blog/post2.jpg";
 import Blog3 from "../assets/img/blog/post3.jpg";
 import Blog4 from "../assets/img/blog/post4.jpg";
 import CustomButton from "./CustomButton";
+import { useNavigate } from "react-router-dom";
 
 const Cards = [
   {
@@ -66,6 +67,10 @@ const BlogSection = () => {
     ],
   };
 
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/blog");
+  };
   return (
     <section className="min-h-[93vh] bg-black pt-16">
       <h1 className="h1 text-white text-center">BLOGS</h1>
@@ -83,12 +88,18 @@ const BlogSection = () => {
                 <p className="text-gray-400">{item.date}</p>
               </div>
               <div>
-                <h3 className="text-[18px] font-semibold md:h4 text-white hover:text-red-500 uppercase ">{item.title}</h3>
+                <h3 className="text-[18px] font-semibold md:h4 text-white hover:text-red-500 uppercase ">
+                  {item.title}
+                </h3>
               </div>
             </div>
           ))}
         </Slider>
-        <CustomButton containerStyles={"px-9 py-3 my-16"} text={"VIEW ALL"} />
+        <CustomButton
+          onClick={handleClick}
+          containerStyles={"px-9 py-3 my-16"}
+          text={"VIEW ALL"}
+        />
       </div>
     </section>
   );
