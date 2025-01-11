@@ -66,7 +66,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative min-h-[80vh] bg-black overflow-hidden">
+    <footer className="relative h-[100vh] bg-black overflow-hidden">
       {/* BackgroundImage */}
       <div
         className="absolute right-8 top-2 w-[30%] h-[90%] bg-cover bg-center opacity-30 pointer-events-none"
