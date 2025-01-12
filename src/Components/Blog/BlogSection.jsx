@@ -2,12 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../Components/BlogSection.css";
-import Blog1 from "../assets/img/blog/post1.jpg";
-import Blog2 from "../assets/img/blog/post2.jpg";
-import Blog3 from "../assets/img/blog/post3.jpg";
-import Blog4 from "../assets/img/blog/post4.jpg";
-import CustomButton from "./CustomButton";
+import "../../Components/Blog/BlogSection.css";
+import Blog1 from "../../assets/img/blog/post1.jpg";
+import Blog2 from "../../assets/img/blog/post2.jpg";
+import Blog3 from "../../assets/img/blog/post3.jpg";
+import Blog4 from "../../assets/img/blog/post4.jpg";
+import CustomButton from "../CustomButton";
 import { useNavigate } from "react-router-dom";
 
 const Cards = [
