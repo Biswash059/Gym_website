@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
-import AboutSection from "../Components/AboutSection";
+import AboutSection from "../Components/About/AboutSection";
 import Classes from "../Components/Classes";
 import TrainerMeetSection from "../Components/TrainerMeetSection";
 import Membership from "../Components/Membership";
@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <ToastContainer />
       <Hero />
-      <AboutSection heading={"About Us"}/>
+      <AboutSection heading={"About Us"} />
       <Classes />
       <TrainerMeetSection />
       <Membership />
