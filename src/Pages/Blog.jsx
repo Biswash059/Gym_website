@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Components/Header";
+import BgBlog from "../assets/img/BgBlog.jpg"
 import HeroImage from "../assets/img/hero/bg.png";
 import BlogList from "../Components/Blog/BlogList";
 import Footer from "../Components/Footer";
@@ -26,6 +27,7 @@ const Blog = () => {
         <Footer />
       </div>
     </section>
+
   );
 };
 
