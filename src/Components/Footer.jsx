@@ -67,10 +67,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative h-[100vh] bg-black overflow-hidden">
+    <footer className="relative min-h-[100vh] bg-black overflow-hidden">
       {/* BackgroundImage */}
       <div
-        className="absolute right-8 top-2 w-[30%] h-[90%] bg-cover bg-center opacity-30 pointer-events-none"
+        className="absolute right-8 top-2 w-[70%] md:w-[30%] h-[35%] md:h-[90%] bg-cover bg-center opacity-30 pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(
               ellipse at center,
