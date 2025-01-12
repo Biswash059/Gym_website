@@ -1,5 +1,6 @@
 import React from 'react'
 import CustomButton from './CustomButton'
+import RoundButton from './RoundButton'
 import Img1 from "../assets/img/trainers/david.jpg"
 import Img2 from "../assets/img/trainers/rosy.jpg"
 import Img3 from "../assets/img/trainers/matt.jpg"
@@ -44,25 +45,24 @@ const TrainerMeetSection = () => {
               <img src={item.img} alt="" />
               <h2 className="h2 text-center">{item.name}</h2>
               <p className="text-center">{item.type}</p>
+
               <div className="flex justify-center items-center gap-5 mt-4">
-                <div className="relative border-0 border-red-600 rounded-full p-4 group overflow-hidden cursor-pointer">
-                  <span className="absolute bottom-0 left-0 w-full h-0 bg-blue-700 z-10 transition-all duration-500 ease-in-out group-hover:h-full"></span>
-                  <span className="relative z-20  group-hover:text-white">
-                    <FaFacebookF />
-                  </span>
-                </div>
-                <div className="relative border-0 border-red-600 rounded-full p-4 group overflow-hidden cursor-pointer">
-                  <span className="absolute bottom-0 left-0 w-full h-0 bg-blue-400 z-10 transition-all duration-500 ease-in-out group-hover:h-full"></span>
-                  <span className="relative z-20  group-hover:text-white">
-                    <FaTwitter />
-                  </span>
-                </div>
-                <div className="relative border-0 border-red-600 rounded-full p-4 group overflow-hidden cursor-pointer">
-                  <span className="absolute bottom-0 left-0 w-full h-0 bg-red-700 z-10 transition-all duration-500 ease-in-out group-hover:h-full"></span>
-                  <span className="relative z-20  group-hover:text-white">
-                    <FaYoutube />
-                  </span>
-                </div>
+                <RoundButton
+                  divStyles="border-0 border-red-600"
+                  spanStyles="bg-blue-700"
+                  text={<FaFacebookF size={20} />}
+                />
+                <RoundButton
+                  divStyles="border-0 border-red-600"
+                  spanStyles="bg-blue-400"
+                  text={<FaTwitter size={20} />}
+                />
+                <RoundButton
+                  divStyles="border-0 border-red-600"
+                  spanStyles="bg-red-700"
+                  text={<FaYoutube size={20} />}
+                />
+                
               </div>
             </div>
           ))}
