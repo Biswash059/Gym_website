@@ -21,6 +21,7 @@ import {
 import CustomButton from "./CustomButton";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import RoundButton from "./RoundButton";
 
 const Cards = [
   {
@@ -184,24 +185,21 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 text-white border-t border-white/20 mt-20 mx-5 py-12">
           <p className="text-gray-400">&copy; Copyright 2024 FitPhysique. </p>
           <div className="flex gap-6 md:gap-10">
-            <div className="relative  bg-white text-red-500 rounded-full p-4 group overflow-hidden cursor-pointer">
-              <span className="absolute bottom-0 left-0 w-full h-0 bg-blue-700 z-10 transition-all duration-500 ease-in-out group-hover:h-full"></span>
-              <span className="relative z-20  group-hover:text-white transition-all duration-300 ease-in-out">
-                <FaFacebookF size={20} />
-              </span>
-            </div>
-            <div className="relative bg-white text-red-500 rounded-full p-4 group overflow-hidden cursor-pointer">
-              <span className="absolute bottom-0 left-0 w-full h-0 bg-blue-400 z-10 transition-all duration-500 ease-in-out group-hover:h-full"></span>
-              <span className="relative z-20  group-hover:text-white transition-all duration-300 ease-in-out">
-                <FaTwitter size={20} />
-              </span>
-            </div>
-            <div className="relative bg-white text-red-500 rounded-full p-4 group overflow-hidden cursor-pointer">
-              <span className="absolute bottom-0 left-0 w-full h-0 bg-red-700 z-10 transition-all duration-500 ease-in-out group-hover:h-full"></span>
-              <span className="relative z-20  group-hover:text-white transition-all duration-300 ease-in-out">
-                <FaYoutube size={20} />
-              </span>
-            </div>
+            <RoundButton
+              divStyles="bg-white text-red-500"
+              spanStyles="bg-blue-700"
+              text={<FaFacebookF size={20} />}
+            />
+            <RoundButton
+              divStyles="bg-white text-red-500"
+              spanStyles="bg-blue-400"
+              text={<FaTwitter size={20} />}
+            />
+            <RoundButton
+              divStyles="bg-white text-red-500"
+              spanStyles="bg-red-700"
+              text={<FaYoutube size={20} />}
+            />
           </div>
         </div>
       </div>
