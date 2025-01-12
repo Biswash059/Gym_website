@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../Components/Header";
+import CustomHero from "../Components/CustomHero";
 import Footer from "../Components/Footer";
 
 const Trainer = () => {
   return (
     <div>
-      <Header />
+      <CustomHero link={"trainer"} text={"Trainer"} />
       <Footer />
     </div>
   );
