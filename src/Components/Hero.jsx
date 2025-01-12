@@ -9,7 +9,7 @@ const Hero = () => {
       style={{ backgroundImage: `url(${HeroImage})` }}
       id="home"
     >
-      <Header />
+      <Header activeLink={"home"} />
       <div className="container mx-auto">
         <Slider />
       </div>

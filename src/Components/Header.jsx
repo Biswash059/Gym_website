@@ -1,11 +1,19 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import Logo from "../assets/img/logo.png";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const Header = () => {
-  const [activeLink, setActiveLink] = useState("home");
+const Header = ({ activeLink: initialActiveLink }) => {
+  const [activeLink, setActiveLink] = useState(initialActiveLink || "home");
   const [menuNav, setMenuNav] = useState(false);
+
+  useEffect(() => {
+    // Update the state if the `initialActiveLink` changes dynamically
+    if (initialActiveLink) {
+      setActiveLink(initialActiveLink);
+    }
+  }, [initialActiveLink]);
 
   const handleLinkClick = (link) => {
     if (activeLink !== link) {
