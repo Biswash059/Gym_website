@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import Blog1 from "../../assets/img/blog/post1.jpg";
 import Blog2 from "../../assets/img/blog/post2.jpg";
