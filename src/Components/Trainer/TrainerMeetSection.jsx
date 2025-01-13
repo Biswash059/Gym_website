@@ -1,8 +1,8 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import CustomButton from '../CustomButton'
-import RoundButton from '../RoundButton'
-import Img1 from "../../assets/img/trainers/david.jpg"
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import CustomButton from "../CustomButton";
+import RoundButton from "../RoundButton";
+import Img1 from "../../assets/img/trainers/david.jpg";
 import Img2 from "../../assets/img/trainers/rosy.jpg";
 import Img3 from "../../assets/img/trainers/matt.jpg";
 import Img4 from "../../assets/img/trainers/sofia.jpg";
@@ -10,33 +10,30 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 
-
 const Cards = [
-    {
-        name: 'DAVID WILLIAMS',
-        type: 'Body Builder Coach',
-        img: Img1,
-    },
-    {
-        name: 'ROSY RIVERA',
-        type: 'Cardio Coach',
-        img: Img2,
-    },
-    {
-        name: 'MATT STONE',
-        type: 'Fitness Coach',
-        img: Img3,
-    },
-    {
-        name: ' SOFIA LAUREN',
-        type: 'Crossfit Coach',
-        img: Img4,
-    }
-]
-
+  {
+    name: "DAVID WILLIAMS",
+    type: "Body Builder Coach",
+    img: Img1,
+  },
+  {
+    name: "ROSY RIVERA",
+    type: "Cardio Coach",
+    img: Img2,
+  },
+  {
+    name: "MATT STONE",
+    type: "Fitness Coach",
+    img: Img3,
+  },
+  {
+    name: " SOFIA LAUREN",
+    type: "Crossfit Coach",
+    img: Img4,
+  },
+];
 
 const TrainerMeetSection = () => {
-
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/trainer");
@@ -69,7 +66,6 @@ const TrainerMeetSection = () => {
                   spanStyles="bg-red-700"
                   text={<FaYoutube size={20} />}
                 />
-                
               </div>
             </div>
           ))}
@@ -84,6 +80,6 @@ const TrainerMeetSection = () => {
       </div>
     </section>
   );
-}
+};
 
-export default TrainerMeetSection
+export default TrainerMeetSection;

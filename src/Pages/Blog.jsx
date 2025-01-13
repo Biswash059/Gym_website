@@ -2,7 +2,6 @@ import React from "react";
 import BlogList from "../Components/Blog/BlogList";
 import Footer from "../Components/Footer";
 import CustomHero from "../Components/CustomHero";
-
 const Blog = () => {
   return (
     <>
