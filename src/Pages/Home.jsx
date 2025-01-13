@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <ToastContainer />
       <Hero />
-      <AboutSection />
+      <AboutSection heading={"About Us"}/>
       <Classes />
       <TrainerMeetSection />
       <Membership />

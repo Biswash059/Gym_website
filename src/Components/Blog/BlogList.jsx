@@ -1,4 +1,4 @@
-import "../../Components/Blog/BlogSection.css";
+import "../../Components/Blog/BlogSection";
 import Blog1 from "../../assets/img/blog/post1.jpg";
 import Blog2 from "../../assets/img/blog/post2.jpg";
 import Blog3 from "../../assets/img/blog/post3.jpg";

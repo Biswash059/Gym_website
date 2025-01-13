@@ -1,11 +1,13 @@
 import React from "react";
-import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import TrainerList from "../Components/Trainer/TrainerList";
+import CustomHero from "../Components/CustomHero";
 
 const Trainer = () => {
   return (
     <div>
-      <Header />
+      <CustomHero link={"trainer"} text={"Trainers"} />
+      <TrainerList />
       <Footer />
     </div>
   );
