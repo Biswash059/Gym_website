@@ -5,6 +5,7 @@ import Founder from "../Components/About/Founder";
 import Footer from "../Components/Footer";
 import Achievements from "../Components/About/Achievements";
 import Faqs from "../Components/About/Faqs";
+import ShortClip from "../Components/About/ShortClip";
 
 const About = () => {
   return (
@@ -14,6 +15,7 @@ const About = () => {
       <Founder />
       <Achievements />
       <Faqs />
+      <ShortClip />
       <Footer />
     </>
   );
