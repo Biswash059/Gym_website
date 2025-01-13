@@ -37,7 +37,7 @@ const Faqs = () => {
             className="bg-white rounded-lg shadow-md flex flex-col p-6 pb-4 justify-center"
           >
             <div className="flex justify-between items-center">
-              <h2 className="text-2xl font-semibold mr-3">{item.question}</h2>
+              <h2 className="text-lg md:text-xl font-semibold mr-3">{item.question}</h2>
               <IoIosArrowDropdownCircle
                 onClick={() => handlebutton(index)} // Pass the question's index
                 className={`cursor-pointer transition-transform ease-in-out duration-200 ${
@@ -48,7 +48,7 @@ const Faqs = () => {
               />
             </div>
             <p
-              className={`mt-4 text-gray-700 text-lg max-w-[85%] transition-all ease-in-out duration-300 ${
+              className={`mt-4 text-gray-700 text-base md:text-lg max-w-[85%] transition-all ease-in-out duration-300 ${
                 openIndex === index
                   ? "max-h-[300px] opacity-100"
                   : "max-h-0 opacity-0"

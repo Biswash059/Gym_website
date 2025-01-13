@@ -1,9 +1,11 @@
-import CustomButton from "./CustomButton";
-import RoundButton from "./RoundButton";
-import Img1 from "../assets/img/trainers/david.jpg";
-import Img2 from "../assets/img/trainers/rosy.jpg";
-import Img3 from "../assets/img/trainers/matt.jpg";
-import Img4 from "../assets/img/trainers/sofia.jpg";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import CustomButton from "../CustomButton";
+import RoundButton from "../RoundButton";
+import Img1 from "../../assets/img/trainers/david.jpg";
+import Img2 from "../../assets/img/trainers/rosy.jpg";
+import Img3 from "../../assets/img/trainers/matt.jpg";
+import Img4 from "../../assets/img/trainers/sofia.jpg";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
@@ -32,6 +34,11 @@ const Cards = [
 ];
 
 const TrainerMeetSection = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/trainer");
+  };
+
   return (
     <section className="min-h-screen">
       <div>
@@ -67,6 +74,7 @@ const TrainerMeetSection = () => {
           <CustomButton
             text={"VIEW ALL TRAINERS"}
             containerStyles="px-6 py-3 bg-red-300 mt-4 mb-10 md:mb-0 "
+            onClick={handleClick}
           />
         </div>
       </div>

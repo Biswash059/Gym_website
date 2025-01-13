@@ -1,5 +1,6 @@
 import "./index.css";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./Components/scroll";
 import Home from "./Pages/Home";
 import Blog from "./Pages/Blog";
 import BlogContent from "./Components/Blog/BlogContent";
@@ -9,17 +10,19 @@ import TrainerContent from "./Components/Trainer/TrainerContent";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />}></Route>
-
-      <Route path="/trainer/:id" element={<TrainerContent />} />
-      <Route path="/trainer" element={<Trainer />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/trainer" element={<Trainer />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:id" element={<BlogContent />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/trainer/:id" element={<TrainerContent />} />
+        <Route path="/trainer" element={<Trainer />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/trainer" element={<Trainer />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogContent />} />
+      </Routes>
+      </>
   );
 };
 
