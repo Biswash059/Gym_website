@@ -1,7 +1,7 @@
 import React from "react";
+import CustomHero from "../Components/CustomHero";
 import Footer from "../Components/Footer";
 import TrainerList from "../Components/Trainer/TrainerList";
-import CustomHero from "../Components/CustomHero";
 
 const Trainer = () => {
   return (

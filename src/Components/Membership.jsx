@@ -119,7 +119,7 @@ const Membership = () => {
         backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(${BgImg})`,
       }}
     >
-      <div className="mt-8">
+      <div className="my-8">
         <h1 className="h1 text-center text-white">MEMBERSHIP</h1>
 
         <div className="flex flex-wrap justify-center items-center gap-20 mt-9">
