@@ -1,6 +1,5 @@
 import React from "react";
 import CustomButton from "../CustomButton";
-import { Link } from "react-router-dom";
 
 const ShortClip = () => {
 

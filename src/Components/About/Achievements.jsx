@@ -39,7 +39,7 @@ const Achievements = () => {
                 
                 const { ref, inView } = useInView({ threshold: 0.5 });
                 return(
-                <div key={index} className='flex flex-col justify-center items-center'>
+                <div key={index} className='flex flex-col justify-center items-center my-2'>
                     <div className='border border-red-700 w-[140px] h-[140px] mx-auto rounded-full p-1 mb-6'>
                         <div ref={ref} className='border border-red-500 w-full h-full flex items-center justify-center text-5xl rounded-full'>
                             {inView && (    
