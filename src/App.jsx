@@ -7,6 +7,7 @@ import BlogContent from "./Components/Blog/BlogContent";
 import About from "./Pages/About";
 import Trainer from "./Pages/Trainer";
 import TrainerContent from "./Components/Trainer/TrainerContent";
+import Contact from "./Pages/Contact";
 
 const App = () => {
   return (
@@ -21,6 +22,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogContent />} />
+        <Route path="/contact" element={<Contact />} />
+
       </Routes>
       </>
   );

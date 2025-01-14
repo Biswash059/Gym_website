@@ -18,7 +18,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import CustomButton from "./CustomButton";
+import CustomButton from "../Components/CustomButton";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RoundButton from "./RoundButton";
