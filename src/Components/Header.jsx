@@ -135,8 +135,16 @@ const Header = ({ activeLink: initialActiveLink }) => {
 
         {/* Login buttons */}
         <div className="flex gap-2 Lg:gap-6 md:gap-3 md:text-[16px] lg:text-[18px] font-semibold">
-          <button className="text-red-600">LOGIN</button>
-          <button>REGISTER</button>
+          <button className="text-red-600">
+            <Link to="/login" onClick={() => handleLinkClick("login")}>
+              LOGIN
+            </Link>
+          </button>
+          <button>
+            <Link to="/register" onClick={() => handleLinkClick("register")}>
+            REGISTER
+            </Link>
+          </button>
         </div>
         <div onClick={() => handleMenuNav()} className="block md:hidden z-30">
           {menuNav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
