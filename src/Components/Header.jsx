@@ -90,7 +90,7 @@ const Header = ({ activeLink: initialActiveLink }) => {
             </li>
             <li>
               <Link
-                to="testimonials"
+                to="/testimonials"
                 onClick={() => handleLinkClick("testimonials")}
               >
                 <span

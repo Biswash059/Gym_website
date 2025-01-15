@@ -1,9 +1,9 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Img1 from "../assets/img/testimonial/lucy.jpg";
-import Img2 from "../assets/img/testimonial/maria.jpg";
-import Img3 from "../assets/img/testimonial/michael.jpg";
+import Img1 from "../../assets/img/testimonial/lucy.jpg";
+import Img2 from "../../assets/img/testimonial/maria.jpg";
+import Img3 from "../../assets/img/testimonial/michael.jpg";
 
 const info = [
   {
@@ -64,9 +64,7 @@ const Testimonials = () => {
   };
   return (
     <div className="p-4 overflow-x-hidden min-h-[75vh] flex flex-col items-center">
-      <h1 className="h1 mt-10 ">
-        OUR TESTIMONIALS
-      </h1>
+      <h1 className="h1 mt-10 ">OUR TESTIMONIALS</h1>
 
       <Slider {...settings} className="w-full max-w-6xl mt-6 ">
         {info.map((item, index) => (

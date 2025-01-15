@@ -6,7 +6,7 @@ import TrainerMeetSection from "../Components/Trainer/TrainerMeetSection";
 import Membership from "../Components/Membership";
 import BmiCalc from "../Components/BmiCalc";
 import BlogSection from "../Components/Blog/BlogSection";
-import Testimonials from "../Components/Testimonials";
+import Testimonials from "../Components/Testimonials/Testimonials";
 import Footer from "../Components/Footer";
 import Brands from "../Components/Brands";
 import { ToastContainer } from "react-toastify";
