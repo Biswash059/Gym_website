@@ -27,7 +27,7 @@ const Header = ({ activeLink: initialActiveLink }) => {
 
   return (
     <nav>
-      <div className="bg-black text-white w-full flex justify-around items-center py-4 px-6 md:px-20 lg:px-30 overflow-x-hidden">
+      <div className="fixed z-[1000] bg-opacity-70 backdrop-blur-md bg-black text-white w-full flex justify-around items-center py-4 px-6 md:px-20 lg:px-30 overflow-x-hidden">
         {/* Logo Section */}
         <div className="z-40">
           <img className="min-w-[85px]" src={Logo} alt="" />
@@ -135,8 +135,16 @@ const Header = ({ activeLink: initialActiveLink }) => {
 
         {/* Login buttons */}
         <div className="flex gap-2 Lg:gap-6 md:gap-3 md:text-[16px] lg:text-[18px] font-semibold">
-          <button className="text-red-600">LOGIN</button>
-          <button>REGISTER</button>
+          <button className="text-red-600">
+            <Link to="/login" onClick={() => handleLinkClick("login")}>
+              LOGIN
+            </Link>
+          </button>
+          <button>
+            <Link to="/register" onClick={() => handleLinkClick("register")}>
+              REGISTER
+            </Link>
+          </button>
         </div>
         <div onClick={() => handleMenuNav()} className="block md:hidden z-30">
           {menuNav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import BgImg from '../assets/img/membership/bg.jpg'
 import { MdCheck } from "react-icons/md";
 import { MdClose } from 'react-icons/md';
@@ -112,6 +113,12 @@ const Cards = [
   }
 ];
 const Membership = () => {
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/register");
+  };
+
   return (
     <section
       className="min-h-screen bg-center bg-cover bg-no-repeat overflow-hidden"
@@ -146,7 +153,7 @@ const Membership = () => {
                   <strong className="text-5xl">{item.price}</strong>
                   <em className="self-end text-2xl">/month</em>
                 </p>
-                <CustomButton containerStyles="px-6 py-3 bg-black" text="Buy Now" />
+                <CustomButton onClick={handleClick} containerStyles="px-6 py-3 bg-black" text="Buy Now" />
               </div>
             </div>
           ))}
