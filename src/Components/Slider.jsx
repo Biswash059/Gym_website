@@ -1,12 +1,17 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import CustomButton from "./CustomButton";
 import SwiperButton from "./SwiperButton";
+import { useNavigate } from "react-router-dom";
 
 const Slider = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="relative w-full h-full">
       <Swiper>
@@ -22,8 +27,9 @@ const Slider = () => {
                 Start by taking inspiration, Continue it to give inspiration
               </p>
               <CustomButton
+                onClick={handleClick}
                 text="Get started"
-                containerStyles="w-[196px] h-[62px] bg-red-300 mt-4"
+                containerStyles="w-[196px] h-[62px] bg-red-500 mt-4"
               />
             </div>
           </div>
@@ -40,8 +46,9 @@ const Slider = () => {
                 Start by taking inspiration, Continue it to give inspiration
               </p>
               <CustomButton
+              onClick={handleClick}
                 text="Get started"
-                containerStyles="w-[196px] h-[62px] bg-red-300 mt-4 "
+                containerStyles="w-[196px] h-[62px] bg-red-500 mt-4 "
               />
             </div>
           </div>

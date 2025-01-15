@@ -5,20 +5,22 @@ import { FaLock } from "react-icons/fa";
 import HeroImg from "../assets/img/hero.jpg"
 import BgImg from "../assets/img/trainers/matt.jpg"
 import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 
 
 const Login = () => {
   return (
+    <>
     <section
       className="min-h-screen bg-center bg-cover bg-no-repeat"
       style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${HeroImg})`,
       }}
     >
       <Header activeLink={"#"}/>
-      <div className="flex justify-center items-center mt-10 md:mt-24">
+      <div className="flex justify-center items-center pt-36 pb-24 md:pt-44 md:pb-20">
         <div className="bg-white flex flex-col md:flex-row md:min-w-[55%] min-h-[80vh] md:min-h-[60vh]">
           <div className="px-6 py-10 flex-1 flex flex-col justify-center">
-            <h4 className="text-2xl tracking-wide font-semibold">
+            <h4 className="text-2xl tracking-wide font-semibold mb-1">
               <span className="underline decoration-red-500">Lo</span>gin
             </h4>
             <form action="#" className="">
@@ -80,6 +82,8 @@ const Login = () => {
         </div>
       </div>
     </section>
+      <Footer />
+      </>
   );
 }
 
