@@ -13,6 +13,8 @@ import TestimonialPage from "./Pages/TestimonialPage";
 
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import PriceComponent from "./Components/Price/PriceComponent";
+import PricePage from "./Pages/PricePage";
 
 const App = () => {
   return (
@@ -29,6 +31,7 @@ const App = () => {
         <Route path="/testimonials" element={<TestimonialPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/prices" element={<PricePage />} />
       </Routes>
     </>
   );
