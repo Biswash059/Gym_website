@@ -1,52 +1,67 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const PriceComponent = () => {
+const PriceComponent = ({ headers, rows, caption, className }) => {
   return (
     <section>
-      <div className="w-full h-[100vh]">
-        <h1>Packages and Price</h1>
-        <div>
-          <table className="table-fixed border-2 border-gray-800">
+      <div
+        className={`w-full  sm:h-[50vh] flex flex-col items-center mt-10 ${className}`}
+      >
+        {caption && (
+          <h1 className="text-4xl sm:5xl mb-4 font-bold">{caption}</h1>
+        )}
+        <p className="py-4 sm:py-6 sm:text-base text-center text-red-500">
+          *All of the below prices includes trainers, fully customized workout
+          plan, nurtition plan and showers facility also.
+        </p>
+        <div className=" px-10 w-full overflow-x-hidden">
+          <table className="table-auto border-4 border-gr-500 w-full text-sm sm:text-base ">
             <thead>
-              <tr className="table-fixed border-2 border-gray-800">
-                <th className="table-fixed border-2 border-gray-800">
-                  Regular Membership
-                </th>
-                <th className="table-fixed border-2 border-gray-800">
-                  1 month
-                </th>
-                <th className="table-fixed border-2 border-gray-800">
-                  3 months
-                </th>
-                <th className="table-fixed border-2 border-gray-800">
-                  6 months
-                </th>
-                <th className="table-fixed border-2 border-gray-800">1 year</th>
+              <tr className="table-fixed border-4 border-gray-300 ">
+                {headers.map((header, index) => (
+                  <th
+                    key={index}
+                    className=" text-xl table-fixed border-4 border-gray-300 p-4"
+                  >
+                    {header}
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
-              <tr className="table-fixed border-2 border-gray-800">
-                <td className="table-fixed border-2 border-gray-800">Gym</td>
-                <td className="table-fixed border-2 border-gray-800">3500</td>
-                <td className="table-fixed border-2 border-gray-800">5500</td>
-                <td className="table-fixed border-2 border-gray-800">6500</td>
-                <td className="table-fixed border-2 border-gray-800">7500</td>
-              </tr>
-              <tr>
-                <td className="table-fixed border-2 border-gray-800">
-                  Gym and Cardio
-                </td>
-                <td className="table-fixed border-2 border-gray-800">4000</td>
-                <td className="table-fixed border-2 border-gray-800">4500</td>
-                <td className="table-fixed border-2 border-gray-800">5500</td>
-                <td className="table-fixed border-2 border-gray-800">6500</td>
-              </tr>
+              {rows.map((row, rowIndex) => (
+                <tr
+                  key={rowIndex}
+                  className="table-fixed border-4 border-gray-300"
+                >
+                  {Object.values(row).map((cell, cellIndex) => (
+                    <td
+                      key={cellIndex}
+                      className="table-fixed border-4 border-gray-300 p-4"
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
       </div>
     </section>
   );
+};
+
+PriceComponent.propTypes = {
+  headers: PropTypes.arrayOf(PropTypes.string).isRequired,
+  rows: PropTypes.arrayOf(PropTypes.object).isRequired,
+  caption: PropTypes.string,
+  className: PropTypes.string,
+};
+
+PriceComponent.defaultProps = {
+  caption: null,
+  className: "",
 };
 
 export default PriceComponent;
