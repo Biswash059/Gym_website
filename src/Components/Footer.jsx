@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import BgImg from "../assets/img/blog/post3.jpg";
 import Logo from "../assets/img/logo.png";
 import Img1 from "../assets/img/trainers/david.jpg";
@@ -64,6 +65,11 @@ const Footer = () => {
       toast.error(data.message);
       setResult();
     }
+  };
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/gallery");
   };
 
   return (
@@ -139,7 +145,7 @@ const Footer = () => {
 
           {/* Gallery */}
           <div className="flex flex-col gap-5 px-6 md:p-0">
-            <h3 className="h3 uppercase text-red-500">Gallery</h3>
+            <h3 onClick={handleClick} className="h3 uppercase text-red-500 cursor-pointer">Gallery</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 ">
               <img src={Img1} alt="" className="w-full h-full" />
               <img src={Img2} alt="" className="w-full h-full" />
