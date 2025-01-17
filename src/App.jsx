@@ -1,5 +1,5 @@
 import "./index.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./Components/scroll";
 import Home from "./Pages/Home";
 import Blog from "./Pages/Blog";
@@ -8,10 +8,10 @@ import About from "./Pages/About";
 import Trainer from "./Pages/Trainer";
 import TrainerContent from "./Components/Trainer/TrainerContent";
 import Contact from "./Pages/Contact";
+import TestimonialPage from "./Pages/TestimonialPage";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Gallery from "./Pages/Gallery"
-
 
 const App = () => {
   return (
@@ -25,11 +25,12 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogContent />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/testimonials" element={<TestimonialPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/gallery" element={<Gallery />} />
       </Routes>
-      </>
+    </>
   );
 };
 
