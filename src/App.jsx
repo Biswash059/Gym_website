@@ -7,14 +7,12 @@ import BlogContent from "./Components/Blog/BlogContent";
 import About from "./Pages/About";
 import Trainer from "./Pages/Trainer";
 import TrainerContent from "./Components/Trainer/TrainerContent";
-
 import Contact from "./Pages/Contact";
 import TestimonialPage from "./Pages/TestimonialPage";
-
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
-import PriceComponent from "./Components/Price/PriceComponent";
 import PricePage from "./Pages/PricePage";
+import Gallery from "./Pages/Gallery"
 
 const App = () => {
   return (
@@ -32,6 +30,8 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/prices" element={<PricePage />} />
+        <Route path="/gallery" element={<Gallery />} />
+
       </Routes>
     </>
   );
