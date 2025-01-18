@@ -201,7 +201,7 @@ const GallerySection = () => {
         {filterCards.map((item) => (
           <div
             key={item.id}
-            className="overflow-hidden rounded-md shadow-md cursor-pointer border-[3px] border-black"
+            className="overflow-hidden rounded-md shadow-md cursor-pointer"
           >
             <img
               src={item.img}
