@@ -11,6 +11,7 @@ import Contact from "./Pages/Contact";
 import TestimonialPage from "./Pages/TestimonialPage";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import PricePage from "./Pages/PricePage";
 import Gallery from "./Pages/Gallery"
 
 const App = () => {
@@ -28,7 +29,9 @@ const App = () => {
         <Route path="/testimonials" element={<TestimonialPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/prices" element={<PricePage />} />
         <Route path="/gallery" element={<Gallery />} />
+
       </Routes>
     </>
   );
