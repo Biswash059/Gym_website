@@ -12,7 +12,10 @@ import TestimonialPage from "./Pages/TestimonialPage";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import PricePage from "./Pages/PricePage";
-import Gallery from "./Pages/Gallery"
+import Gallery from "./Pages/Gallery";
+
+
+
 
 const App = () => {
   return (

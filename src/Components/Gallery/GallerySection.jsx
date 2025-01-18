@@ -1,30 +1,30 @@
-import React, {useState} from 'react'
-import Masonry from 'react-masonry-css'
-import img1 from '../../assets/img/Gallery/Equipments/img2.jpg'
-import img2 from '../../assets/img/Gallery/Equipments/img3.jpg'
-import img3 from '../../assets/img/Gallery/Equipments/img1.jpg'
-import img4 from '../../assets/img/Gallery/Equipments/img4.jpg'
-import img5 from '../../assets/img/Gallery/Equipments/img7.jpg'
-import img6 from '../../assets/img/Gallery/Equipments/img5.jpg'
-import img7 from '../../assets/img/Gallery/Equipments/img6.jpg'
-import img8 from '../../assets/img/Gallery/Equipments/img8.jpg'
-import img9 from '../../assets/img/Gallery/Cardio/img1.jpg'
-import img10 from '../../assets/img/Gallery/Cardio/img2.jpg'
-import img11 from '../../assets/img/Gallery/Cardio/img3.jpg'
-import img12 from '../../assets/img/Gallery/Cardio/img4.jpg'
-import img13 from '../../assets/img/Gallery/Cardio/img5.jpg'
-import img14 from '../../assets/img/Gallery/Gym Workout/img1.jpg'
-import img15 from '../../assets/img/Gallery/Gym Workout/img2.jpg'
-import img16 from '../../assets/img/Gallery/Gym Workout/img3.jpg'
-import img17 from '../../assets/img/Gallery/Gym Workout/img4.jpg'
-import img18 from '../../assets/img/Gallery/Gym Workout/img5.jpg'
-import img19 from '../../assets/img/Gallery/Gym Workout/img6.jpg'
-import img20 from '../../assets/img/Gallery/Gym Workout/img7.jpg'
-import img21 from '../../assets/img/Gallery/Achievements/img4.jpg'
-import img22 from '../../assets/img/Gallery/Achievements/img1.jpg'
-import img23 from '../../assets/img/Gallery/Achievements/img2.jpg'
-import img24 from '../../assets/img/Gallery/Achievements/img3.jpg'
-import img25 from '../../assets/img/Gallery/Achievements/img5.jpg'
+import React, { useState } from "react";
+import Masonry from "react-masonry-css";
+import img1 from "../../assets/img/Gallery/Equipments/img2.jpg";
+import img2 from "../../assets/img/Gallery/Equipments/img3.jpg";
+import img3 from "../../assets/img/Gallery/Equipments/img1.jpg";
+import img4 from "../../assets/img/Gallery/Equipments/img4.jpg";
+import img5 from "../../assets/img/Gallery/Equipments/img7.jpg";
+import img6 from "../../assets/img/Gallery/Equipments/img5.jpg";
+import img7 from "../../assets/img/Gallery/Equipments/img6.jpg";
+import img8 from "../../assets/img/Gallery/Equipments/img8.jpg";
+import img9 from "../../assets/img/Gallery/Cardio/img1.jpg";
+import img10 from "../../assets/img/Gallery/Cardio/img2.jpg";
+import img11 from "../../assets/img/Gallery/Cardio/img3.jpg";
+import img12 from "../../assets/img/Gallery/Cardio/img4.jpg";
+import img13 from "../../assets/img/Gallery/Cardio/img5.jpg";
+import img14 from "../../assets/img/Gallery/Gym Workout/img1.jpg";
+import img15 from "../../assets/img/Gallery/Gym Workout/img2.jpg";
+import img16 from "../../assets/img/Gallery/Gym Workout/img3.jpg";
+import img17 from "../../assets/img/Gallery/Gym Workout/img4.jpg";
+import img18 from "../../assets/img/Gallery/Gym Workout/img5.jpg";
+import img19 from "../../assets/img/Gallery/Gym Workout/img6.jpg";
+import img20 from "../../assets/img/Gallery/Gym Workout/img7.jpg";
+import img21 from "../../assets/img/Gallery/Achievements/img4.jpg";
+import img22 from "../../assets/img/Gallery/Achievements/img1.jpg";
+import img23 from "../../assets/img/Gallery/Achievements/img2.jpg";
+import img24 from "../../assets/img/Gallery/Achievements/img3.jpg";
+import img25 from "../../assets/img/Gallery/Achievements/img5.jpg";
 
 const Cards = [
   {
@@ -155,15 +155,12 @@ const Cards = [
 ];
 
 const GallerySection = () => {
-
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filterCards =
     activeCategory === "All"
-    ? Cards
-    :Cards.filter((card) => (
-      card.category=== activeCategory
-    ))
+      ? Cards
+      : Cards.filter((card) => card.category === activeCategory);
 
   const breakpointColumns = {
     default: 4,
@@ -201,7 +198,7 @@ const GallerySection = () => {
         {filterCards.map((item) => (
           <div
             key={item.id}
-            className="overflow-hidden rounded-md shadow-md cursor-pointer border-[3px] border-black"
+            className="overflow-hidden rounded-md shadow-md cursor-pointer "
           >
             <img
               src={item.img}
@@ -213,6 +210,6 @@ const GallerySection = () => {
       </Masonry>
     </section>
   );
-}
+};
 
-export default GallerySection
+export default GallerySection;
