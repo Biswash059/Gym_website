@@ -3,6 +3,7 @@ import CustomHero from "../Components/CustomHero";
 import Footer from "../Components/Footer";
 import PriceComponent from "../Components/Price/PriceComponent";
 
+
 const membershipHeaders = [
   "Regular Membership",
   "1 month",
@@ -41,16 +42,19 @@ const packageRows = [
   },
 ];
 
+
 const PricePage = () => {
   return (
     <div>
       <CustomHero link={"prices"} text={"Price"} />
+
       <PriceComponent
         headers={membershipHeaders}
         rows={membershipRows}
         caption="Packages and prices"
       />
       <PriceComponent headers={packageHeaders} rows={packageRows} />
+
       <Footer />
     </div>
   );

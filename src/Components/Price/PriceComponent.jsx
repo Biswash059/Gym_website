@@ -44,6 +44,7 @@ const PriceComponent = ({ headers, rows, caption, className }) => {
                   ))}
                 </tr>
               ))}
+
             </tbody>
           </table>
         </div>

@@ -14,6 +14,9 @@ import Register from "./Pages/Register";
 import PricePage from "./Pages/PricePage";
 import Gallery from "./Pages/Gallery";
 
+
+
+
 const App = () => {
   return (
     <>
@@ -31,6 +34,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/prices" element={<PricePage />} />
         <Route path="/gallery" element={<Gallery />} />
+
       </Routes>
     </>
   );
