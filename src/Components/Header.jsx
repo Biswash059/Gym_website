@@ -27,7 +27,7 @@ const Header = ({ activeLink: initialActiveLink }) => {
 
   return (
     <nav>
-      <div className="fixed z-[1000] bg-opacity-70 backdrop-blur-md bg-black text-white w-full flex justify-around items-center py-4 px-6 md:px-20 lg:px-30 overflow-x-hidden">
+      <div className="fixed z-[1000] bg-opacity-70 backdrop-blur-md bg-black text-white w-full flex justify-around items-center py-4 px-6 md:px-20 lg:px-30">
         {/* Logo Section */}
         <div className="z-40">
           <img className="min-w-[85px]" src={Logo} alt="" />
@@ -154,11 +154,11 @@ const Header = ({ activeLink: initialActiveLink }) => {
         <div
           className={
             menuNav
-              ? "fixed left-0 top-0 w-[100%] h-full bg-[#000300] ease-in-out duration-500 z-20"
+              ? "fixed left-0 top-0 w-[100%] h-[100vh] bg-[#000300] ease-in-out duration-500 z-20"
               : "fixed left-[-100%]"
           }
         >
-          <ul className="flex flex-col gap-6 items-center p-[60px] text-xl">
+          <ul className="flex flex-col gap-6 items-center p-[80px] text-xl">
             <li>
               <Link to="/" onClick={() => handleLinkClick("home")}>
                 <span
