@@ -136,7 +136,7 @@ const Footer = () => {
           <div className="flex flex-col gap-5 px-6 md:p-0">
             <h3 className="h3 uppercase text-red-500">Recent Blog Post</h3>
             {Cards.map((item, index) => (
-              <div key={index} className="border-b border-dotted pb-3">
+              <div key={index} className="border-b border-gray-400 pb-3">
                 <h2 className="h4 uppercase">{item.title}</h2>
                 <p className="text-sm text-gray-400">{item.date}</p>
               </div>
